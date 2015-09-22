@@ -27,6 +27,14 @@
     <deploy-destination>file:///home/data/httpd/archive.eclipse.org/tracecompass/tracecompass-test-traces/</deploy-destination>
   </properties>
 
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>RELEASE</version>
+    </dependency>
+  </dependencies>
+
   <modules>
     <module>ctf</module>
   </modules>

@@ -12,7 +12,9 @@ a p2 update site. The `-Dmaven-deploy-destination` and `-Dp2-deploy-destination`
 properties can be used to specify their respective deploy locations.
 For example:
 
-    mvn clean deploy -Dmaven-deploy-destination=/var/www/traces/maven -Dp2-deploy-destination=/var/www/traces/repository
+    mvn clean deploy -Dmaven-deploy-destination=file:///var/www/traces/maven -Dp2-deploy-destination=/var/www/traces/repository
+
+(Note that the first property needs a `file:///` scheme, but the second does not.) 
 
 You can then point depending projects to these locations.
 

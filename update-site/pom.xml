@@ -48,7 +48,10 @@
             </goals>
             <configuration>
               <artifacts>
-                <artifact><id>org.eclipse.tracecompass.testtraces:tracecompass-test-traces-ctf:1.0.0</id></artifact>
+                <artifact>
+                  <id>org.eclipse.tracecompass.testtraces:tracecompass-test-traces-ctf:1.0.0</id>
+                  <source>true</source>
+                </artifact>
               </artifacts>
             </configuration>
           </execution>

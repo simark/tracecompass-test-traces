@@ -69,14 +69,12 @@
               </goals>
               <configuration>
               <target>
-                <!--
                 <delete includeemptydirs="false">
                   <fileset
                     dir="${deploy-destination}">
                     <include name="**" />
                   </fileset>
                 </delete>
-                -->
                 <copy includeemptydirs="false"
                   todir="${p2-deploy-destination}">
                   <fileset dir="target/repository">

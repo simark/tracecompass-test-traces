@@ -227,7 +227,19 @@ public enum CtfTestTrace {
      * Trace length: ~1 s
      * </pre>
      */
-    DEBUG_INFO("/debuginfo-test-app2", 41, 1);
+    DEBUG_INFO("/debuginfo-test-app2", 41, 1),
+
+    /**
+     * UST Trace with Memory analysis information
+     *
+     * <pre>
+     * Trace Size: 12 MB
+     * Tracer: lttng-ust 2.7
+     * Event count: 328056
+     * Trace length: ~0.53 s
+     * </pre>
+     */
+    MEMORY_ANALYSIS("/memory", 41, 1);
 
     private final String fTraceName;
     private final int fNbEvent;

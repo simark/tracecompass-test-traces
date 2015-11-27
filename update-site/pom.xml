@@ -71,7 +71,7 @@
               <target>
                 <delete includeemptydirs="false">
                   <fileset
-                    dir="${deploy-destination}">
+                    dir="${p2-deploy-destination}">
                     <include name="**" />
                   </fileset>
                 </delete>

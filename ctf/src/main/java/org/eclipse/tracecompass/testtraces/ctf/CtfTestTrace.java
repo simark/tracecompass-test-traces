@@ -239,7 +239,7 @@ public enum CtfTestTrace {
      * Trace length: ~0.53 s
      * </pre>
      */
-    MEMORY_ANALYSIS("/memory", 41, 1);
+    MEMORY_ANALYSIS("/memory", 328056, 1);
 
     private final String fTraceName;
     private final int fNbEvent;

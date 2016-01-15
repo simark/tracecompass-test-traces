@@ -239,18 +239,33 @@ public enum CtfTestTrace {
      * Trace length: ~0.53 s
      * </pre>
      */
-    MEMORY_ANALYSIS("/memory", 328056, 1);
+    MEMORY_ANALYSIS("/memory", 328056, 1),
+
+    /**
+     * CTF trace coming from the perf-CTF converter.
+     *
+     * CPUs are not defined by standard "cpu_id" CTF data, but by event fields
+     * called "perf_cpu".
+     *
+     * <pre>
+     * Trace Size: 196 KB
+     * Tracer: perf
+     * Event count: 1500
+     * Trace length: 0.417057183 s
+     * </pre>
+     */
+    PERF_TASKSET2("/perf-taskset2", 1500, 1);
 
     private final String fTraceName;
     private final int fNbEvent;
     private int fDuration;
 
     private CtfTestTrace(String traceName, int nbEvent, int time) {
-    	fTraceName = traceName;
+        fTraceName = traceName;
         fNbEvent = nbEvent;
         fDuration = time;
     }
-    
+
     public URL getTraceURL() {
         URL url = this.getClass().getResource(fTraceName);
         if (url == null) {
@@ -259,7 +274,7 @@ public enum CtfTestTrace {
         }
         return url;
     }
-    
+
     /**
      * Get the number of events for a trace
      *
@@ -278,4 +293,3 @@ public enum CtfTestTrace {
         return fDuration;
     }
 }
-

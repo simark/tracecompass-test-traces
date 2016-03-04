@@ -222,7 +222,7 @@ public enum CtfTestTrace {
      *
      * <pre>
      * Trace Size: 76 KB (including index/)
-     * Tracer: lttng-ust 2.8
+     * Tracer: lttng-ust 2.8~pre
      * Event count: 41
      * Trace length: ~1 s
      * </pre>
@@ -254,7 +254,23 @@ public enum CtfTestTrace {
      * Trace length: 0.417057183 s
      * </pre>
      */
-    PERF_TASKSET2("/perf-taskset2", 1500, 1);
+    PERF_TASKSET2("/perf-taskset2", 1500, 1),
+
+    /**
+     * Kernel trace tracing the creation of multiple threads
+     *
+     * This would typically used to test the vertical scaling of the analysis
+     * with many threads.
+     *
+     * <pre>
+     * Trace Size: 8.2M
+     * Tracer: lttng-kernel 2.8~pre
+     * Event count: 240 644
+     * Trace length: 0.432 662 358 s
+     * </pre>
+     */
+    MANY_THREADS("/many-threads", 240644, 1);
+
 
     private final String fTraceName;
     private final int fNbEvent;

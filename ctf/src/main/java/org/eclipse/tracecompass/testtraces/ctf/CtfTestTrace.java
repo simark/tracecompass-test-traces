@@ -217,17 +217,34 @@ public enum CtfTestTrace {
     /** Set of many traces, do not call getTrace */
     TRACE_EXPERIMENT("/exp", -1, -1),
 
+	/**
+	 * UST Trace with Debug Info information (dev version)
+	 *
+	 * <pre>
+	 * Trace Size: 76 KB (including index/)
+	 * Tracer: lttng-ust 2.8~pre
+	 * Event count: 41
+	 * Trace length: ~1 s
+	 * </pre>
+	 * 
+	 * @deprecated Some event names were changed between the moment this trace
+	 *             was taken, and the final LTTng 2.8 release. Please use the
+	 *             updated {@link #DEBUG_INFO3} trace instead.
+	 */
+    @Deprecated
+    DEBUG_INFO("/debuginfo-test-app2", 41, 1),
+
     /**
-     * UST Trace with Debug Info information
+     * UST Trace with Debug Info information, final LTTng 2.8 version
      *
      * <pre>
-     * Trace Size: 76 KB (including index/)
-     * Tracer: lttng-ust 2.8~pre
-     * Event count: 41
-     * Trace length: ~1 s
+     * Trace Size: 144 KB (including index/)
+     * Tracer: lttng-ust 2.8 RC2
+     * Event count: 291
+     * Trace length: ~2 s
      * </pre>
      */
-    DEBUG_INFO("/debuginfo-test-app2", 41, 1),
+    DEBUG_INFO3("/debuginfo-test-app3", 291, 2),
 
     /**
      * UST Trace with Memory analysis information
